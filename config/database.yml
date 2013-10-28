@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: bootcampsearch_production
   pool: 5
-  username: bootcampsearch
+  username: 
   password:
