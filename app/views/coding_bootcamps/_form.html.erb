@@ -1,10 +1,10 @@
-<%= form_for(@school) do |f| %>
-  <% if @school.errors.any? %>
+<%= form_for(@coding_bootcamp) do |f| %>
+  <% if @coding_bootcamp.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@school.errors.count, "error") %> prohibited this school from being saved:</h2>
+      <h2><%= pluralize(@coding_bootcamp.errors.count, "error") %> prohibited this coding_bootcamp from being saved:</h2>
 
       <ul>
-      <% @school.errors.full_messages.each do |msg| %>
+      <% @coding_bootcamp.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
