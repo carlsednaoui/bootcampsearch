@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bootcampsearch</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Bootcampsearch</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class="container">
+      <%= link_to "Bootcamps", coding_bootcamps_path %>
+      <%= yield %>
+    </div>
 
-</body>
+  </body>
 </html>

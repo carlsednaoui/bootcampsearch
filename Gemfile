@@ -11,9 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'quiet_assets', :group => :development
-
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails'
+gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

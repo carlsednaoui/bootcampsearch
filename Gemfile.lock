@@ -1,10 +1,10 @@
 GIT
-  remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: 8ca1f0a12824d57a1827df6d5ec9e6a49d3d426d
+  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
+  revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
+  branch: 3
   specs:
-    anjlab-bootstrap-rails (3.0.0.3)
-      railties (>= 3.0)
-      sass (>= 3.2)
+    bootstrap-sass (3.0.0.0)
+      sass (~> 3.2)
 
 GEM
   remote: https://rubygems.org/
@@ -139,7 +139,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails!
+  bootstrap-sass!
   coffee-rails (~> 4.0.0)
   heroku
   jbuilder (~> 1.2)
