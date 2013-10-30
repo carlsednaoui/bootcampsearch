@@ -13,6 +13,9 @@ gem 'jquery-rails'
 gem 'quiet_assets', :group => :development
 gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
 
+# scraping
+gem 'nokogiri'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
