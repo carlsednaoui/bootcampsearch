@@ -1,0 +1,9 @@
+$navbar-inverse-bg: #2980B9;
+$navbar-inverse-link-color: white;
+
+@import "bootstrap";
+
+// This fixes with the fixed navbar bootstrap style
+body {
+  margin-top: 50px;
+}
