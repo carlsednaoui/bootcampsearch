@@ -199,7 +199,6 @@ DEPENDENCIES
   activeadmin!
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
-  devise
   heroku
   jbuilder (~> 1.2)
   jquery-rails
