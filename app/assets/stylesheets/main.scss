@@ -1,0 +1,53 @@
+/***********************
+-> Main styles
+***********************/
+h1, h2, h3 {
+  font-family: 'Lato', serif;
+}
+
+a.navbar-brand {
+  font-family: 'Lato', serif;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+/***********************
+-> Bootcamp show styles
+***********************/
+
+#notice {
+  margin: 0;
+}
+
+.icon {
+  font-family: 'Icomoon';
+}
+
+.header {
+  height: 500px;
+  background-color: #4AA3DF;
+}
+
+.bootcamp-name {
+  margin-top: 0;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 4em;
+  color: #FBFCFC;
+  font-weight: 700;
+}
+
+.bootcamp-tagline {
+  text-align: center;
+  color: #D9EDFC;
+}
+
+// .bootcamp-logo {
+//   <%= image_tag("bootcamps_logo/Flatiron_School_logo.png", class: "bootcamp-logo") %>
+//   position: absolute;
+//   z-index: 2;
+
+//   margin-top: 50px;
+//   margin-left: 100px;
+//   width: 230px;
+// }
