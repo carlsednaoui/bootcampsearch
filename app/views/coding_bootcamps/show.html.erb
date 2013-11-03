@@ -1,8 +1,35 @@
 <p id="notice"><%= notice %></p>
 <div class="header">
-  <h1 class="bootcamp-name">Flatiron School</h1>
-  <h2 class="bootcamp-tagline">Learn to build awesome things with code</h2>
-  <span class="icon-earth"></span>
+  <div class="container">
+    <h1 class="bootcamp-name"><%= @coding_bootcamp.name %></h1>
+    <h2 class="bootcamp-tagline">Learn to build awesome things with code</h2>
+    <div class="bootcamp-features">
+      <div class="col-md-3 bootcamp-feature">
+        <div class="icon-list icon-large"></div>
+        <div class="feature-description">Learn <%= @coding_bootcamp.focus %></div>
+      </div>
+
+      <div class="col-md-2 bootcamp-feature">
+        <div class="icon-clock icon-large"></div>
+        <div class="feature-description">In <%= @coding_bootcamp.duration %></div>
+      </div>
+
+      <div class="col-md-2 bootcamp-feature">
+        <div class="icon-busy icon-large"></div>
+        <div class="feature-description">Coding <%= @coding_bootcamp.weekly_time_commitment %> per week</div>
+      </div>
+
+      <div class="col-md-2 bootcamp-feature">
+        <div class="icon-coin icon-large"></div>
+        <div class="feature-description">For only <%= @coding_bootcamp.cost %></div>
+      </div>
+
+      <div class="col-md-3 bootcamp-feature">
+        <div class="icon-earth icon-large"></div>
+        <div class="feature-description"><%= @coding_bootcamp.city %></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131031030835) do
+ActiveRecord::Schema.define(version: 20131103230540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20131031030835) do
     t.string   "city"
     t.string   "country"
     t.string   "website"
+    t.string   "tagline"
   end
 
   create_table "taggings", force: true do |t|

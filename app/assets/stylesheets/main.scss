@@ -19,12 +19,28 @@ a.navbar-brand {
   margin: 0;
 }
 
-.icon {
-  font-family: 'Icomoon';
+.icon-large {
+  color: #D9EDFC;
+  font-size: 3em;
+}
+
+.bootcamp-features {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bootcamp-feature {
+  margin-bottom: 30px;
+}
+
+.feature-description {
+  padding-top: 10px;
+  color: #D9EDFC;
+  font-size: 1.3em;
 }
 
 .header {
-  height: 500px;
+  height: 110%;
   background-color: #4AA3DF;
 }
 
