@@ -1,27 +1,29 @@
+<div class="container">
 <h1>Listing coding_bootcamps</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @coding_bootcamps.each do |coding_bootcamp| %>
+  
+  <table>
+    <thead>
       <tr>
-        <td><%= coding_bootcamp.name %></td>
-        <td><%= link_to 'Show', coding_bootcamp %></td>
-        <td><%= link_to 'Edit', edit_coding_bootcamp_path(coding_bootcamp) %></td>
-        <td><%= link_to 'Destroy', coding_bootcamp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @coding_bootcamps.each do |coding_bootcamp| %>
+        <tr>
+          <td><%= coding_bootcamp.name %></td>
+          <td><%= link_to 'Show', coding_bootcamp %></td>
+          <td><%= link_to 'Edit', edit_coding_bootcamp_path(coding_bootcamp) %></td>
+          <td><%= link_to 'Destroy', coding_bootcamp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Coding bootcamp', new_coding_bootcamp_path %>
+  <br>
+
+  <%= link_to 'New Coding bootcamp', new_coding_bootcamp_path %>
+</div>

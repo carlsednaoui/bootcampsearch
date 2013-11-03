@@ -1,15 +1,73 @@
-// Bootcamp show styles
+/***********************
+-> Main styles
+***********************/
+h1, h2, h3 {
+  font-family: 'Lato', serif;
+}
+
+a.navbar-brand {
+  font-family: 'Lato', serif;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: 'Icomoon';
+  src:url('icomoon.eot');
+  src:url('icomoon.eot?#iefix') format('embedded-opentype'),
+    url('icomoon.svg#icomoon') format('svg'),
+    url('icomoon.woff') format('woff'),
+    url('icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*="icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-earth:before {
+  content: "\e600";
+}
+.icon-coin:before {
+  content: "\e601";
+}
+.icon-clock:before {
+  content: "\e602";
+}
+.icon-busy:before {
+  content: "\e603";
+}
+.icon-list:before {
+  content: "\e604";
+}
+
+
+/***********************
+-> Bootcamp show styles
+***********************/
+
 #notice {
   margin: 0;
 }
 
+.icon {
+  font-family: 'Icomoon';
+}
+
 .header {
   height: 500px;
-  background: image-url("bootcamps_bcg/Flatiron_School_bcg.png") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #4AA3DF;
 }
 
 .bootcamp-name {
@@ -17,12 +75,13 @@
   padding-top: 30px;
   text-align: center;
   font-size: 4em;
-  color: #2C3E50;
+  color: #FBFCFC;
+  font-weight: 700;
 }
 
 .bootcamp-tagline {
   text-align: center;
-  color: #3D566E;
+  color: #D9EDFC;
 }
 
 // .bootcamp-logo {
