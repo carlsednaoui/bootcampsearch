@@ -3,62 +3,14 @@
   <div class="container">
     <h1 class="bootcamp-name"><%= @coding_bootcamp.name %></h1>
     <h2 class="bootcamp-tagline">Here Goes My Awesome Tagline</h2>
-    <div class="bootcamp-features">
-      <div class="col-md-3 bootcamp-feature">
-        <div class="icon-list icon-large"></div>
-        <div class="feature-description">Learn <%= @coding_bootcamp.focus %></div>
-      </div>
-
-      <div class="col-md-2 bootcamp-feature">
-        <div class="icon-clock icon-large"></div>
-        <div class="feature-description">In <%= @coding_bootcamp.duration %></div>
-      </div>
-
-      <div class="col-md-2 bootcamp-feature">
-        <div class="icon-busy icon-large"></div>
-        <div class="feature-description">Coding <%= @coding_bootcamp.weekly_time_commitment %> per week</div>
-      </div>
-
-      <div class="col-md-2 bootcamp-feature">
-        <div class="icon-coin icon-large"></div>
-        <div class="feature-description">For only <%= @coding_bootcamp.cost %></div>
-      </div>
-
-      <div class="col-md-3 bootcamp-feature">
-        <div class="icon-earth icon-large"></div>
-        <div class="feature-description"><%= @coding_bootcamp.city %></div>
-      </div>
-    </div>
   </div>
 </div>
 
 <div class="container">
   <p>
     <strong>name:</strong> <%= @coding_bootcamp.name %> <br>
-    <strong>bootcamp_type:</strong> <%= @coding_bootcamp.bootcamp_type %> <br>
-    <strong>focus:</strong> <%= @coding_bootcamp.focus %> <br>
-    <strong>duration:</strong> <%= @coding_bootcamp.duration %> <br>
-    <strong>class_size:</strong> <%= @coding_bootcamp.class_size %> <br>
-    <strong>sessions_per_year:</strong> <%= @coding_bootcamp.sessions_per_year %> <br>
-    <strong>weekly_time_commitment:</strong> <%= @coding_bootcamp.weekly_time_commitment %> <br>
-    <strong>min_skill:</strong> <%= @coding_bootcamp.min_skill %> <br>
-    <strong>placement_test:</strong> <%= @coding_bootcamp.placement_test %> <br>
-    <strong>prep_work:</strong> <%= @coding_bootcamp.prep_work %> <br>
-    <strong>interview:</strong> <%= @coding_bootcamp.interview %> <br>
-    <strong>cost:</strong> <%= @coding_bootcamp.cost %> <br>
-    <strong>refund:</strong> <%= @coding_bootcamp.refund %> <br>
-    <strong>financing:</strong> <%= @coding_bootcamp.financing %> <br>
-    <strong>deposit:</strong> <%= @coding_bootcamp.deposit %> <br>
-    <strong>payment_plan:</strong> <%= @coding_bootcamp.payment_plan %> <br>
-    <strong>job_assistance:</strong> <%= @coding_bootcamp.job_assistance %> <br>
-    <strong>housing:</strong> <%= @coding_bootcamp.housing %> <br>
-    <strong>visa:</strong> <%= @coding_bootcamp.visa %> <br>
-    <strong>email:</strong> <%= @coding_bootcamp.email %> <br>
-    <strong>phone:</strong> <%= @coding_bootcamp.phone %> <br>
-    <strong>address:</strong> <%= @coding_bootcamp.address %> <br>
-    <strong>city:</strong> <%= @coding_bootcamp.city %> <br>
-    <strong>country:</strong> <%= @coding_bootcamp.country %> <br>
-    <strong>website:</strong> <%= @coding_bootcamp.website %>
+    <strong>website:</strong> <%= @coding_bootcamp.website %> <br>
+    <strong>description:</strong> <%= @coding_bootcamp.description %>
   </p>
 
   <%= link_to 'Back', coding_bootcamps_path %>

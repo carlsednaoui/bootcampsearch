@@ -2,28 +2,28 @@ puts "scraping"
 
 bootcamper_finder_map = {
   type: 1,
-  focus: 3,
-  length: 5,
-  class_size: 7,
-  sessions: 9,
-  dedication: 11,
-  min_skill: 13,
-  placement_test: 15,
-  prep_work: 17,
-  interview: 19,
-  cost: 21,
-  refund: 23,
-  financing: 25,
-  deposit: 27,
-  payment_plan: 29,
-  job_assistance: 31,
-  housing: 33,
-  visa: 35,
-  email: 37,
-  phone: 39,
-  address: 41,
-  city: 43,
-  country: 45,
+  # focus: 3,
+  # length: 5,
+  # class_size: 7,
+  # sessions: 9,
+  # dedication: 11,
+  # min_skill: 13,
+  # placement_test: 15,
+  # prep_work: 17,
+  # interview: 19,
+  # cost: 21,
+  # refund: 23,
+  # financing: 25,
+  # deposit: 27,
+  # payment_plan: 29,
+  # job_assistance: 31,
+  # housing: 33,
+  # visa: 35,
+  # email: 37,
+  # phone: 39,
+  # address: 41,
+  # city: 43,
+  # country: 45,
   website: 47
 }
 
@@ -36,30 +36,31 @@ for url in urls do
   b = CodingBootcamp.new
 
   b.name = doc.css("h1.product-title").text
-  b.bootcamp_type = doc.css("table td")[bootcamper_finder_map[:type]].text
-  b.focus = doc.css("table td")[bootcamper_finder_map[:focus]].text
-  b.duration = doc.css("table td")[bootcamper_finder_map[:length]].text
-  b.class_size = doc.css("table td")[bootcamper_finder_map[:class_size]].text
-  b.sessions_per_year = doc.css("table td")[bootcamper_finder_map[:sessions]].text
-  b.weekly_time_commitment = doc.css("table td")[bootcamper_finder_map[:dedication]].text
-  b.min_skill = doc.css("table td")[bootcamper_finder_map[:min_skill]].text
-  b.placement_test = doc.css("table td")[bootcamper_finder_map[:placement_test]].text
-  b.prep_work = doc.css("table td")[bootcamper_finder_map[:prep_work]].text
-  b.interview = doc.css("table td")[bootcamper_finder_map[:interview]].text
-  b.cost = doc.css("table td")[bootcamper_finder_map[:cost]].text
-  b.refund = doc.css("table td")[bootcamper_finder_map[:refund]].text
-  b.financing = doc.css("table td")[bootcamper_finder_map[:financing]].text
-  b.deposit = doc.css("table td")[bootcamper_finder_map[:deposit]].text
-  b.payment_plan = doc.css("table td")[bootcamper_finder_map[:payment_plan]].text
-  b.job_assistance = doc.css("table td")[bootcamper_finder_map[:job_assistance]].text
-  b.housing = doc.css("table td")[bootcamper_finder_map[:housing]].text
-  b.visa = doc.css("table td")[bootcamper_finder_map[:visa]].text
-  b.email = doc.css("table td")[bootcamper_finder_map[:email]].text
-  b.phone = doc.css("table td")[bootcamper_finder_map[:phone]].text
-  b.address = doc.css("table td")[bootcamper_finder_map[:address]].text
-  b.city = doc.css("table td")[bootcamper_finder_map[:city]].text
-  b.country = doc.css("table td")[bootcamper_finder_map[:country]].text
+  # b.bootcamp_type = doc.css("table td")[bootcamper_finder_map[:type]].text
+  # b.focus = doc.css("table td")[bootcamper_finder_map[:focus]].text
+  # b.duration = doc.css("table td")[bootcamper_finder_map[:length]].text
+  # b.class_size = doc.css("table td")[bootcamper_finder_map[:class_size]].text
+  # b.sessions_per_year = doc.css("table td")[bootcamper_finder_map[:sessions]].text
+  # b.weekly_time_commitment = doc.css("table td")[bootcamper_finder_map[:dedication]].text
+  # b.min_skill = doc.css("table td")[bootcamper_finder_map[:min_skill]].text
+  # b.placement_test = doc.css("table td")[bootcamper_finder_map[:placement_test]].text
+  # b.prep_work = doc.css("table td")[bootcamper_finder_map[:prep_work]].text
+  # b.interview = doc.css("table td")[bootcamper_finder_map[:interview]].text
+  # b.cost = doc.css("table td")[bootcamper_finder_map[:cost]].text
+  # b.refund = doc.css("table td")[bootcamper_finder_map[:refund]].text
+  # b.financing = doc.css("table td")[bootcamper_finder_map[:financing]].text
+  # b.deposit = doc.css("table td")[bootcamper_finder_map[:deposit]].text
+  # b.payment_plan = doc.css("table td")[bootcamper_finder_map[:payment_plan]].text
+  # b.job_assistance = doc.css("table td")[bootcamper_finder_map[:job_assistance]].text
+  # b.housing = doc.css("table td")[bootcamper_finder_map[:housing]].text
+  # b.visa = doc.css("table td")[bootcamper_finder_map[:visa]].text
+  # b.email = doc.css("table td")[bootcamper_finder_map[:email]].text
+  # b.phone = doc.css("table td")[bootcamper_finder_map[:phone]].text
+  # b.address = doc.css("table td")[bootcamper_finder_map[:address]].text
+  # b.city = doc.css("table td")[bootcamper_finder_map[:city]].text
+  # b.country = doc.css("table td")[bootcamper_finder_map[:country]].text
   b.website = doc.css("table td")[bootcamper_finder_map[:website]].text
+  b.description = doc.css("#product-description div").inner_html
 
   if b.save
     puts "."
@@ -67,5 +68,5 @@ for url in urls do
     puts "err"
     next
   end
-  sleep(5)
+  sleep(1)
 end
