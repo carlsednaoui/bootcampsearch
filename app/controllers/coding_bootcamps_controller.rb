@@ -64,7 +64,7 @@ class CodingBootcampsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_coding_bootcamp
-      @coding_bootcamp = CodingBootcamp.find(params[:id])
+      @coding_bootcamp = CodingBootcamp.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
