@@ -10,6 +10,9 @@ class CodingBootcampsController < ApplicationController
   # GET /coding_bootcamps/1
   # GET /coding_bootcamps/1.json
   def show
+    if request.path != coding_bootcamp_path(@coding_bootcamp)
+      redirect_to @coding_bootcamp, status: :moved_permanently
+    end
   end
 
   # GET /coding_bootcamps/new
