@@ -2,6 +2,14 @@
 - gSchool.it - I think they're close
 
 
+## To fill
+ - Bootcamps: Taglines
+
+## To do
+- Programs model
+- Reviews model
+- Act as taggeable
+
 ## Resources
 
 - http://stackoverflow.com/questions/2556362/anyone-got-seo-tips-for-ruby-on-rails
