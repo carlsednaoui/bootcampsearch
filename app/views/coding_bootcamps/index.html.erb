@@ -14,10 +14,7 @@
     <tbody>
       <% @coding_bootcamps.each do |coding_bootcamp| %>
         <tr>
-          <td><%= coding_bootcamp.name %></td>
-          <td><%= link_to 'Show', coding_bootcamp %></td>
-          <td><%= link_to 'Edit', edit_coding_bootcamp_path(coding_bootcamp) %></td>
-          <td><%= link_to 'Destroy', coding_bootcamp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to coding_bootcamp.name, coding_bootcamp %></td>
         </tr>
       <% end %>
     </tbody>
