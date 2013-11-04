@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  coding_bootcamp_id: 1
+  name: MyString
+  focus: MyString
+
+two:
+  coding_bootcamp_id: 1
+  name: MyString
+  focus: MyString

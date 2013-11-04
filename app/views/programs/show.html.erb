@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<div class="header">
+  <div class="container">
+    <h1 class="bootcamp-name"><%= @program.name %></h1>
+    <h2 class="bootcamp-tagline">Here Goes My Awesome Tagline</h2>
+  </div>
+</div>
+
+<div class="container">
+  <p>
+    <strong>name:</strong> <%= @program.name %> <br>
+    <strong>coding_bootcamp_id:</strong> <%= @program.coding_bootcamp_id %> <br>
+    <strong>focus:</strong> <%= @program.focus %>
+  </p>
+
+  <%= link_to 'Back', coding_bootcamps_path %>
+</div>

@@ -3,6 +3,7 @@ Bootcampsearch::Application.routes.draw do
   ActiveAdmin.routes(self)
   
   root "static#home"
+  resources :programs
 
   # enables use of /coding-bootcamp instead of /coding_bootcamp
   resources "coding-bootcamp", :controller => :coding_bootcamps, :as => :coding_bootcamps

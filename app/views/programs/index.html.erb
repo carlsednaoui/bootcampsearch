@@ -1,0 +1,26 @@
+<div class="container">
+<h1>Listing programs</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @programs.each do |program| %>
+        <tr>
+          <td><%= link_to program.name, program %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Program', new_program_path %>
+</div>
