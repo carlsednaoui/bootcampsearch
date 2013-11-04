@@ -42,17 +42,17 @@ class CodingBootcampsController < ApplicationController
 
   # PATCH/PUT /coding_bootcamps/1
   # PATCH/PUT /coding_bootcamps/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @coding_bootcamp.update(coding_bootcamp_params)
-  #       format.html { redirect_to @coding_bootcamp, notice: 'Coding bootcamp was successfully updated.' }
-  #       format.json { head :no_content }
-  #     else
-  #       format.html { render action: 'edit' }
-  #       format.json { render json: @coding_bootcamp.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @coding_bootcamp.update(coding_bootcamp_params)
+        format.html { redirect_to @coding_bootcamp, notice: 'Coding bootcamp was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @coding_bootcamp.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /coding_bootcamps/1
   # DELETE /coding_bootcamps/1.json
