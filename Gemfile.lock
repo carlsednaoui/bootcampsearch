@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 9392ee52d7c512c71b9550cbd7256ba3f6070393
+  revision: 23e8573b7b7e9462dd2019a56eec84b25372d49d
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -18,7 +18,7 @@ GIT
 
 GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
+  revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
   branch: 3
   specs:
     bootstrap-sass (3.0.0.0)
@@ -162,7 +162,7 @@ GEM
       railties (>= 3.2, < 5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rubyzip (1.0.0)
+    rubyzip (1.1.0)
     sass (3.2.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
