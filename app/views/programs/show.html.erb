@@ -10,7 +10,9 @@
   <p>
     <strong>name:</strong> <%= @program.name %> <br>
     <strong>coding_bootcamp_id:</strong> <%= @program.coding_bootcamp_id %> <br>
-    <strong>focus:</strong> <%= @program.focus %>
+    <strong>focus:</strong> <%= raw @program.language_list.map { |l| link_to l, language_path(l) }.join(', ') %>
+    <strong>location:</strong> <%= raw @program.location_list.map { |l| link_to l, location_path(l) }.join(', ') %>
+    <strong>type:</strong> <%= raw @program.type_list.map { |t| link_to t, type_path(t) }.join(', ') %>
   </p>
 
   <%= link_to 'Back', coding_bootcamps_path %>

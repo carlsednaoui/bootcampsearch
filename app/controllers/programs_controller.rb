@@ -4,7 +4,11 @@ class ProgramsController < ApplicationController
   # GET /programs
   # GET /programs.json
   def index
-    @programs = Program.all
+    if params[:tag]
+      @programs = Program.tagged_with(params[:tag])
+    else
+      @programs = Program.all
+    end
   end
 
   # GET /programs/1
@@ -72,6 +76,6 @@ class ProgramsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def program_params
-      params.require(:program).permit(:name, :coding_bootcamp_id, :focus)
+      params.require(:program).permit(:name, :coding_bootcamp_id, :location_list, :language_list, :type_list)
     end
 end

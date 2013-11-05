@@ -3,7 +3,6 @@ class CreatePrograms < ActiveRecord::Migration
     create_table :programs do |t|
       t.integer :coding_bootcamp_id
       t.string :name
-      t.string :focus
 
       t.timestamps
     end
