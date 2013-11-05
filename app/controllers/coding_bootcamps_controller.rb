@@ -4,7 +4,12 @@ class CodingBootcampsController < ApplicationController
   # GET /coding_bootcamps
   # GET /coding_bootcamps.json
   def index
-    @coding_bootcamps = CodingBootcamp.all
+    if params[:tag]
+      @coding_bootcamps = CodingBootcamp.find_all_by_id(Program.tagged_with(params[:tag]).map(&:coding_bootcamp_id))
+    else
+      @coding_bootcamps = CodingBootcamp.all
+    end
+    
   end
 
   # GET /coding_bootcamps/1
@@ -13,6 +18,8 @@ class CodingBootcampsController < ApplicationController
     if request.path != coding_bootcamp_path(@coding_bootcamp)
       redirect_to @coding_bootcamp, status: :moved_permanently
     end
+
+    @programs = @coding_bootcamp.programs
   end
 
   # GET /coding_bootcamps/new
