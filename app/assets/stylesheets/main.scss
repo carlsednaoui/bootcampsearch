@@ -21,16 +21,24 @@ a.navbar-brand {
 
 .icon-large {
   color: #D9EDFC;
-  font-size: 3em;
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.bootcamp-features {
+.bootcamp-tags {
   text-align: center;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
-.bootcamp-feature {
-  margin-bottom: 30px;
+.bootcamp-tag {
+  font-size: 1.4em;
+  text-align: center;
+  color: #D9EDFC;
+}
+
+.bootcamp-tag a {
+  color: #D9EDFC;
 }
 
 .feature-description {

@@ -3,6 +3,29 @@
   <div class="container">
     <h1 class="bootcamp-name"><%= @coding_bootcamp.name %></h1>
     <h2 class="bootcamp-tagline"><%= @coding_bootcamp.tagline %></h2>
+
+    <div class="bootcamp-tags row">
+      <% if @programs.length > 0 %>
+        <% @programs.each do |program| %>
+
+        <div class="bootcamp-tag col-md-2 col-md-offset-3">
+          <span class="icon-list icon-large"></span>
+          <%= raw program.language_list.map { |l| link_to l, language_path(l) }.join(', ') %>
+        </div>
+
+        <div class="bootcamp-tag col-md-2">
+          <span class="icon-earth icon-large"></span>
+          <%= raw program.location_list.map { |l| link_to l, location_path(l) }.join(', ') %>
+        </div>
+
+        <div class="bootcamp-tag col-md-2">
+          <span class="icon-users icon-large"></span>
+          <%= raw program.type_list.map { |t| link_to t, type_path(t) }.join(', ') %>
+        </div>
+
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
