@@ -7,7 +7,7 @@ class CodingBootcampsController < ApplicationController
     if params[:tag]
       @coding_bootcamps = CodingBootcamp.find_all_by_id(Program.tagged_with(params[:tag]).map(&:coding_bootcamp_id))
     else
-      @coding_bootcamps = CodingBootcamp.all
+      @coding_bootcamps =  CodingBootcamp.where(display: true)
     end
     
   end
