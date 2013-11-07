@@ -20,3 +20,7 @@
 ### Ratings/ reviews/ comments
 - https://github.com/jackdempsey/acts_as_commentable
 - https://github.com/muratguzel/letsrate
+
+# Other
+- Alumni success with company logos
+- student projects, pictures
