@@ -20,6 +20,11 @@ class CodingBootcampsController < ApplicationController
     end
 
     @programs = @coding_bootcamp.programs
+    @bootcamp_path = coding_bootcamp_path.split('/')[2]
+
+    @program_languages = @programs.map(&:language_list).flatten.uniq
+    @program_locations = @programs.map(&:location_list).flatten.uniq
+    @program_type      = @programs.map(&:type_list).flatten.uniq
   end
 
   # GET /coding_bootcamps/new
