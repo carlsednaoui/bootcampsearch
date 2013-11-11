@@ -11,7 +11,6 @@ ActiveAdmin.register Program do
       f.input :coding_bootcamp_id
       f.input :language_list
       f.input :location_list
-      f.input :type_list
      end
      f.actions
    end

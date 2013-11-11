@@ -43,12 +43,12 @@ a.navbar-brand {
   color: #D9EDFC;
 }
 
-.icon-large {
-  color: #D9EDFC;
-  font-size: 2em;
-  display: block;
-  margin-bottom: 10px;
-}
+// .icon-large {
+//   color: #D9EDFC;
+//   font-size: 2em;
+//   display: block;
+//   margin-bottom: 10px;
+// }
 
 .bootcamp-tags {
   text-align: center;
@@ -59,6 +59,10 @@ a.navbar-brand {
   font-size: 1.4em;
   text-align: center;
   color: #D9EDFC;
+}
+
+.learn-tag {
+  text-align: left;
 }
 
 .bootcamp-tag a {

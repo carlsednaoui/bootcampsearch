@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107131324) do
+ActiveRecord::Schema.define(version: 20131111053634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(version: 20131107131324) do
     t.string   "slug"
     t.string   "tagline"
     t.boolean  "display",     default: true
+    t.string   "email"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "city"
+    t.string   "country"
   end
 
   add_index "coding_bootcamps", ["slug"], name: "index_coding_bootcamps_on_slug", using: :btree
@@ -62,6 +67,11 @@ ActiveRecord::Schema.define(version: 20131107131324) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
+    t.string   "length"
+    t.string   "cost"
+    t.string   "refund"
+    t.string   "why_we_love"
   end
 
   create_table "taggings", force: true do |t|

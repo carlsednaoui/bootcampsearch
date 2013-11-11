@@ -24,7 +24,6 @@ class CodingBootcampsController < ApplicationController
 
     @program_languages = @programs.map(&:language_list).flatten.uniq
     @program_locations = @programs.map(&:location_list).flatten.uniq
-    @program_type      = @programs.map(&:type_list).flatten.uniq
   end
 
   # GET /coding_bootcamps/new

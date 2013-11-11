@@ -3,5 +3,5 @@ class Program < ActiveRecord::Base
   validates_presence_of :coding_bootcamp_id
 
   acts_as_taggable
-  acts_as_taggable_on :location, :language, :type
+  acts_as_taggable_on :location, :language
 end

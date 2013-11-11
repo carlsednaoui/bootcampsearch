@@ -6,7 +6,6 @@ Bootcampsearch::Application.routes.draw do
   root "coding_bootcamps#index"
   resources :programs
 
-  get 'type/:tag', to: 'coding_bootcamps#index', as: :type
   get 'location/:tag', to: 'coding_bootcamps#index', as: :location
   get 'language/:tag', to: 'coding_bootcamps#index', as: :language
 
