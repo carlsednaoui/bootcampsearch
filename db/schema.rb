@@ -67,11 +67,10 @@ ActiveRecord::Schema.define(version: 20131111053634) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "description"
+    t.text     "description"
     t.string   "length"
     t.string   "cost"
-    t.string   "refund"
-    t.string   "why_we_love"
+    t.text     "why_we_love"
   end
 
   create_table "taggings", force: true do |t|

@@ -5,7 +5,7 @@ ActiveAdmin.register CodingBootcamp do
     end
 
     def permitted_params
-      params.permit(:coding_bootcamp => [:name, :website, :description, :tagline, :display])
+      params.permit(:coding_bootcamp => [:name, :website, :description, :tagline, :display, :email, :phone, :address, :city, :country])
     end
   end
 
@@ -16,6 +16,11 @@ ActiveAdmin.register CodingBootcamp do
       f.input :description
       f.input :tagline
       f.input :display
+      f.input :email
+      f.input :phone
+      f.input :address
+      f.input :city
+      f.input :country, as: 'string'
      end
      f.actions
    end

@@ -28,18 +28,21 @@
   <h2>About <%= @coding_bootcamp.name %></h2>
   <div class="bootcamp-description"><%= raw @coding_bootcamp.description %></div>
   <p><%= link_to @coding_bootcamp.website, @coding_bootcamp.website, target: "blank" %></p>
+  <p><%= mail_to @coding_bootcamp.email, @coding_bootcamp.email, subject: "Hi, I found you on BootcampSearch" %></p>
 
   <% if @programs.length > 0 %>
-  <h2>What you can learn with <%= @coding_bootcamp.name %></h2>
+  <h2>What you can learn at <%= @coding_bootcamp.name %></h2>
     <% @programs.each do |program| %>
       <div class="bootcamp-program">
         <p>
-          <strong>name:</strong> <%= program.name %> <br>
-          <strong>coding_bootcamp_id:</strong> <%= program.coding_bootcamp_id %> <br>
-          <strong>focus:</strong> <%= raw program.language_list.map { |l| link_to l, language_path(l) }.join(', ') %>
-          <strong>location:</strong> <%= raw program.location_list.map { |l| link_to l, location_path(l) }.join(', ') %>
-          <br><strong>why we love it:</strong>
+          <strong>name:</strong> <%= program.name %> (<%= program.cost %>)<br>
+          <%= raw program.language_list.map { |l| link_to l.titleize , language_path(l) }.join(', ') %><br>
+          <strong>duration:</strong> <%= program.length %>, <%= raw program.location_list.map { |l| link_to l, location_path(l) }.join(', ') %>.<br>
+          <%= program.description %> <br>
+          <br><strong>why we love it:</strong><br>
+          <%= program.why_we_love %> <br>
         </p>
+        <strong>program_id:</strong> <%= program.id %> <br>
       </div>
     <% end %>
   <% end %>
