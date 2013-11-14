@@ -24,3 +24,6 @@
 # Other
 - Alumni success with company logos
 - student projects, pictures
+
+# Inspirations
+- http://www.bootgrad.com/#/survey
