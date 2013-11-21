@@ -2,6 +2,9 @@
 - gSchool.it - I think they're close
 
 
+## Design inspiration
+- https://coinbase.com/
+
 ## To fill
  - Bootcamps: Taglines
 
