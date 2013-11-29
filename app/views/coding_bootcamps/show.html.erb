@@ -17,7 +17,7 @@
 
         <div class="bootcamp-tag col-md-2">
           <h2>Location</h2>
-          <%= raw @program_locations.map { |l| link_to l.titleize, language_path(l) }.join(', ') %>
+          <%= raw @program_locations.map { |l| link_to l.titleize, location_path(l) }.join(', ') %>
         </div>
       <% end %>
     </div>
