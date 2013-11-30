@@ -1,26 +1,9 @@
-<div class="container">
-<h1>Listing coding_bootcamps</h1>
+<div class="container bootcamps-index">
+  <h1>Click on a bootcamp to learn more</h1>
   
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @coding_bootcamps.each do |coding_bootcamp| %>
-        <tr>
-          <td><%= link_to coding_bootcamp.name, coding_bootcamp %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Coding bootcamp', new_coding_bootcamp_path %>
+  <% @coding_bootcamps.each do |coding_bootcamp| %>
+    <ul>
+      <li class="col-md-4"><%= link_to coding_bootcamp.name, coding_bootcamp %></li>
+    </ul>
+  <% end %>
 </div>
