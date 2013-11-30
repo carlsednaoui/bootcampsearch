@@ -18,12 +18,35 @@ a.navbar-brand {
   margin-right: -22px;
 }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 .home {
-  background: image-url("home-bcg.png") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  $main-background-color: #4AA3DF;
+  $main-font-color: #FBFCFC;
+
+  background-color: $main-background-color;
+  color: $main-font-color;
+
+  .find-bootcamp-btn {
+    color: $main-font-color;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: 3px solid white;
+    padding: 10px;
+    @include border-radius(4px);
+
+    &:hover {
+      text-decoration: none;
+      background-color: $main-font-color;
+      color: $main-background-color;
+    }
+  }
 
   .container {
     max-width: 960px;
@@ -32,7 +55,7 @@ a.navbar-brand {
 
     .header {
       display: block;
-      margin-bottom: 50px;
+      margin-bottom: 80px;
 
       a {
         margin: 30px 0;
@@ -41,33 +64,34 @@ a.navbar-brand {
       h1 {
         text-align: center;
         padding-top: 50px;
-        padding-bottom: 20px;
-        font-size: 3.5em;
-        color: #354B60;
+        padding-bottom: 50px;
+        font-size: 2.5em;
         font-weight: 700;
         text-transform: capitalize;
       }
     }
 
     .benefits {
-      text-align: center;
-      margin: 0 auto;
+      text-align: left;
 
-      div {
-        font-size: 1.5em;
-        margin-bottom: 30px;
+      .row {
+        margin-bottom: 60px;
       }
 
-      span {
+      img {
+        margin: 25px 30px 25px 0px;
+      }
+
+      h3 {
         padding: 0 20px;
-        font-weight: 800;
-        color: #354B60;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.4m;
       }
 
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
+      p {
+        font-size: 1.1em;
+        font-weight: 300;
       }
     }
 
@@ -75,6 +99,7 @@ a.navbar-brand {
       text-align: left;
 
       h2 {
+        font-size: 1.8em;
         margin-top: 0;
         margin-bottom: 20px;
       }
@@ -86,17 +111,17 @@ a.navbar-brand {
       }
     }
   }
+}
 
-  .footer {
-    text-align: center;
-    
-    img {
-      display: block;
-      margin: 0 auto;
-      padding: 30px 0;
-    }
-    
+footer {
+  background-color: #3D566E;
+  min-height: 300px;
+  text-align: center;
 
+  .pacman {
+    display: block;
+    margin: 0 auto;
+    padding-top: 200px;
   }
 }
 

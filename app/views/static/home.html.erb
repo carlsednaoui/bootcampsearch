@@ -1,49 +1,58 @@
 <div class="home">
   <div class="container">
     <div class="header">
-      <h1>Find the perfect programming bootcamp</h1>
-      <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"btn btn-lg btn-success" %>
+      <h1>Find the perfect programming bootcamp <span class="icon-search"></span></h1>
+      <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"find-bootcamp-btn" %>
     </div>
 
     <div class="row">
-      <div class="what-is col-md-6">
-        <h2>What's a bootcamp anyway?</h2>
-        <p>Programming bootcamps (bootcamps for short) are intensive and semi-intensive programs to help you learn how to develop websites and mobile apps. Some bootcamps are online, others are in person. Some only require part-time commitments while others are only for full-time goers.</p>
-        <p>Finding the right bootcamp can be as tricky as finding the right university. With so many options and so many different programming languages to choose from it's easy to feel lost.</p>
-        <p>That's why we're here! Our goal is to help you choose the right bootcamp given your needs, time available, budget and goals.</p>
-      </div>
+      <div class="benefits">
+        <div class="row">
+          <div class="col-md-6">
+            <%= image_tag("mountain.png", class: "pull-left") %>
+            <h3>What's a Bootcamp?</h3>
+            <p>Programming bootcamps (bootcamps for short) are intensive and semi-intensive programs that help you learn how to develop websites and mobile apps.</p>
+          </div>
 
-      <div class="benefits col-md-6">
-        <div class="benefit-1">
-          <%= image_tag("tactics.png") %>
-          <span>Find the RIGHT bootcamp</span>
+          <div class="col-md-6">
+            <%= image_tag("tactics.png", class: "pull-left") %>
+            <h3>Find the right bootcamp</h3>
+            <p>We'll help you choose the right bootcamp given your needs, time available, budget and goals.</p>
+          </div>     
+          <div class="clearfix"></div>     
         </div>
 
-        <div class="benefit-2">
-          <%= image_tag("rocket.png") %>
-          <span>Gain the SKILLS you want</span>
+        <div class="row">
+          <div class="col-md-6">
+            <%= image_tag("rocket.png", class: "pull-left") %>
+            <h3>Gain the skill you want</h3>
+            <p>With so many options and so many different programming languages to choose from it's easy to feel lost. Discover which bootcamp is tailored to your goals.</p>
+          </div>
+
+          <div class="col-md-6">
+            <%= image_tag("piggy.png", class: "pull-left") %>
+            <h3>Stay within your budget</h3>
+            <p>Some programs are free, others cost over $12,000. Each program has pros and cons; we'll help you decide what's right for you.</p>
+          </div>     
+          <div class="clearfix"></div>     
         </div>
 
-        <div class="benefit-3">
-          <%= image_tag("piggy.png") %>
-          <span>Stay within your BUDGET</span>
-        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <%= image_tag("clock.png", class: "pull-left") %>
+            <h3>Commit the time you can</h3>
+            <p>From online to in-person bootcamps, from part-time to full-time ones, we've got everything you need to find the perfect fit.</p>
+          </div>
 
-        <div class="benefit-4">
-          <%= image_tag("clock.png") %>
-          <span>Commit the TIME you can</span>
-        </div>
-
-        <div class="benefit-5">
-          <%= image_tag("r2d2.png") %>
-          <span>Connect with other NERDS</span>
+          <div class="col-md-6">
+            <%= image_tag("r2d2.png", class: "pull-left") %>
+            <h3>Connect with other nerds</h3>
+            <p>Joining a bootcamp gives you the opportunity to connect with other like-minded individuals. It's a great way to expand your network as you perfect your craft.</p>
+          </div>     
+          <div class="clearfix"></div>     
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="footer">
-    <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"btn btn-lg btn-success" %>
-    <%= image_tag("pacman.gif") %>
+    <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"find-bootcamp-btn" %>
   </div>
 </div>
