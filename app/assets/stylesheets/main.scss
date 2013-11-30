@@ -1,12 +1,14 @@
 /***********************
 -> Main styles
 ***********************/
+$primary-font: 'Lato', serif;
+
 h1, h2, h3 {
-  font-family: 'Lato', serif;
+  font-family: $primary-font;
 }
 
 a.navbar-brand {
-  font-family: 'Lato', serif;
+  font-family: $primary-font;
   font-weight: 300;
   font-size: 2em;
 }
@@ -14,59 +16,71 @@ a.navbar-brand {
 /***********************
 -> Bootcamp show styles
 ***********************/
-
 #notice {
   margin: 0;
 }
 
-.header {
-  height: 110%;
-  background-color: #4AA3DF;
+
+// SCSS awesomeness starts
+$header-background: #4AA3DF;
+$bootcamp-subheader-color: #D9EDFC;
+
+.link-style {
+  color: white;
+  text-decoration: none;
 }
 
-.bootcamp-name, .bootcamp-name a {
+.hover-style {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+// SCSS awesomeness ends
+
+.header {
+  height: 110%;
+  background-color: $header-background;
+}
+
+.bootcamp-name {
+  text-align: center;
+}
+
+.bootcamp-name a {
   margin-top: 0;
   padding-top: 30px;
-  text-align: center;
   font-size: 2.3em;
   color: #FBFCFC;
   font-weight: 700;
 }
 
 .bootcamp-name a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid white;
+  @extend .hover-style;
 }
 
 .bootcamp-tagline {
   text-align: center;
-  color: #D9EDFC;
+  color: $bootcamp-subheader-color;
 }
-
-// .icon-large {
-//   color: #D9EDFC;
-//   font-size: 2em;
-//   display: block;
-//   margin-bottom: 10px;
-// }
 
 .bootcamp-tags {
   text-align: center;
   margin: 50px 0;
-}
-
-.bootcamp-tag {
   font-size: 1.4em;
-  text-align: center;
-  color: #D9EDFC;
-}
-
-.learn-tag {
   text-align: left;
-}
+  color: $bootcamp-subheader-color;
 
-.bootcamp-tag a {
-  color: #D9EDFC;
+  div:first-child {
+    margin-right: 25px;
+  }
+
+  a {
+    @extend .link-style;
+    font-size: 0.9em;
+
+    &:hover {
+      @extend .hover-style;
+    }
+  }
 }
 
 .bootcamp-description {
@@ -76,6 +90,15 @@ a.navbar-brand {
 .bootcamp-program {
   margin: 40px 0;
 }
+
+// .icon-large {
+//   color: #D9EDFC;
+//   font-size: 2em;
+//   display: block;
+//   margin-bottom: 10px;
+// }
+
+
 
 // .bootcamp-logo {
 //   margin-top: 40px;

@@ -10,12 +10,12 @@
 
     <div class="bootcamp-tags row">
       <% if @programs.length > 0 %>
-        <div class="bootcamp-tag col-md-4 col-md-offset-3 learn-tag">
+        <div class="col-md-4 col-md-offset-3">
           <h2>Learn</h2>
           <%= raw @program_languages.map { |l| link_to l.titleize , language_path(l) }.join(', ') %>
         </div>
 
-        <div class="bootcamp-tag col-md-2">
+        <div class="col-md-2">
           <h2>Location</h2>
           <%= raw @program_locations.map { |l| link_to l.titleize, location_path(l) }.join(', ') %>
         </div>
