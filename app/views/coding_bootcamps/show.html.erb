@@ -24,19 +24,19 @@
       </div>
     </div>
   </div>
-
-    
   
   <div class="container">
-    <h2>About <%= @coding_bootcamp.name %></h2>
-    <div class="bootcamp-description"><%= raw @coding_bootcamp.description %></div>
-    <p><%= link_to @coding_bootcamp.website, @coding_bootcamp.website, target: "blank" %></p>
-    <p><%= mail_to @coding_bootcamp.email, @coding_bootcamp.email, subject: "Hi, I found you on BootcampSearch" %></p>
+    <div class="bootcamp-description">
+      <h2>About <%= @coding_bootcamp.name %></h2>
+      <%= raw @coding_bootcamp.description %>
+      <p><%= link_to @coding_bootcamp.website, @coding_bootcamp.website, target: "blank" %></p>
+      <p><%= mail_to @coding_bootcamp.email, @coding_bootcamp.email, subject: "Hi, I found you on BootcampSearch" %></p>
+    </div>
 
-    <% if @programs.length > 0 %>
-    <h2>What you can learn at <%= @coding_bootcamp.name %></h2>
-      <% @programs.each do |program| %>
-        <div class="bootcamp-program">
+    <div class="bootcamp-program">
+      <% if @programs.length > 0 %>
+      <h2>What you can learn at <%= @coding_bootcamp.name %></h2>
+        <% @programs.each do |program| %>
           <p>
             <strong>name:</strong> <%= program.name %> (<%= program.cost %>)<br>
             <%= raw program.language_list.map { |l| link_to l.titleize , language_path(l) }.join(', ') %><br>
@@ -46,9 +46,9 @@
             <%= program.why_we_love %> <br>
           </p>
           <strong>program_id:</strong> <%= program.id %> <br>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
 
     <%= link_to 'Back', coding_bootcamps_path %>
 

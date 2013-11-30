@@ -3,14 +3,14 @@ Bootcampsearch::Application.routes.draw do
   ActiveAdmin.routes(self)
   
   # root "static#home"
-  root "coding_bootcamps#index"
+  root "static#home"
   resources :programs
 
   get 'location/:tag', to: 'coding_bootcamps#index', as: :location
   get 'language/:tag', to: 'coding_bootcamps#index', as: :language
 
   # enables use of /coding-bootcamp instead of /coding_bootcamp
-  resources "coding-bootcamp", :controller => :coding_bootcamps, :as => :coding_bootcamps
+  resources "programming-bootcamps", :controller => :coding_bootcamps, :as => :coding_bootcamps
 
   get "sitemap.xml" => "sitemap#index", as: "sitemap", defaults: { format: "xml" }
 end

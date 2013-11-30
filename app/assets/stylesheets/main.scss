@@ -13,6 +13,47 @@ a.navbar-brand {
   font-size: 2em;
 }
 
+.home {
+  background: image-url("home-bcg.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  text-align: center;
+  
+  a {
+    margin: 30px 0;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    color: #354B60;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  .benefits {
+    max-width: 960px;
+    text-align: center;
+    margin: 0 auto;
+    
+    div {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+
+    span {
+      padding: 0 20px;
+      font-weight: 800;
+      color: #354B60;
+    }
+  }
+}
+
 /* grouping imports here to save http request */
 @import 'icons';
 @import 'coding_bootcamps';
