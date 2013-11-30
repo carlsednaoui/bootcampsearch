@@ -1,33 +1,43 @@
 <div class="home">
-  <h1>Find the perfect programming bootcamp</h1>
-  <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"btn btn-lg btn-success" %>
-
-  <div class="benefits">
-    <div class="benefit-1">
-      <%= image_tag("tactics.png") %>
-      <span>Find the RIGHT bootcamp</span>
+  <div class="container">
+    <div class="header">
+      <h1>Find the perfect programming bootcamp</h1>
+      <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"btn btn-lg btn-success" %>
     </div>
 
-    <div class="benefit-2">
-      <span>Gain the SKILLS you want</span>
-      <%= image_tag("rocket.png") %>
-    </div>
+    <div class="benefits">
+      <div class="benefit-1">
+        <%= image_tag("tactics.png") %>
+        <span>Find the RIGHT bootcamp</span>
+      </div>
 
-    <div class="benefit-3">
-      <%= image_tag("piggy.png") %>
-      <span>Stay within your BUDGET</span>
-    </div>
+      <div class="benefit-2">
+        <%= image_tag("rocket.png") %>
+        <span>Gain the SKILLS you want</span>
+      </div>
 
-    <div class="benefit-4">
-      <span>Commit the TIME you can</span>
-      <%= image_tag("clock.png") %>
-    </div>
+      <div class="benefit-3">
+        <%= image_tag("piggy.png") %>
+        <span>Stay within your BUDGET</span>
+      </div>
 
-    <div class="benefit-5">
-      <%= image_tag("r2d2.png") %>
-      <span>Connect with other NERDS</span>
-    </div>
+      <div class="benefit-4">
+        <%= image_tag("clock.png") %>
+        <span>Commit the TIME you can</span>
+      </div>
 
+      <div class="benefit-5">
+        <%= image_tag("r2d2.png") %>
+        <span>Connect with other NERDS</span>
+      </div>
+
+    </div>
   </div>
-  <%= image_tag("pacman.gif") %>
+
+  <!-- What is a bootcamp and who attends bootcamps -->
+
+  <div class="footer">
+    <%= link_to "Find My Bootcamp »", coding_bootcamps_path, class:"btn btn-lg btn-success" %>
+    <%= image_tag("pacman.gif") %>
+  </div>
 </div>

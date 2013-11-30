@@ -20,37 +20,63 @@ a.navbar-brand {
   -o-background-size: cover;
   background-size: cover;
 
-  text-align: center;
-  
-  a {
-    margin: 30px 0;
-  }
-
-  h1 {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 3.5em;
-    color: #354B60;
-    font-weight: 700;
-    text-transform: capitalize;
-  }
-
-  .benefits {
+  .container {
     max-width: 960px;
     text-align: center;
-    margin: 0 auto;
-    
-    div {
-      font-size: 1.5em;
-      margin: 20px 0;
+    padding-bottom: 50px;
+
+    .header {
+      display: block;
+
+      a {
+        margin: 30px 0;
+      }
+
+      h1 {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        font-size: 3.5em;
+        color: #354B60;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
     }
 
-    span {
-      padding: 0 20px;
-      font-weight: 800;
-      color: #354B60;
+    .benefits {
+      text-align: center;
+      margin: 0 auto;
+      float: left;
+
+      div {
+        font-size: 1.5em;
+        margin: 30px 0;
+      }
+
+      span {
+        padding: 0 20px;
+        font-weight: 800;
+        color: #354B60;
+      }
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     }
+  }
+
+  .footer {
+    text-align: center;
+    
+    img {
+      display: block;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+    
+
   }
 }
 
