@@ -44,8 +44,10 @@
                 <%= raw program.language_list.map { |l| link_to l.titleize , language_path(l) }.join(', ') %><br>
               </div>
               <%= program.description %> <br>
-              <br><strong>Why we love it</strong><br>
-              <%= program.why_we_love %> <br>
+              <% if program.why_we_love? %>
+                <br><strong>Why we love it</strong><br>
+                <%= program.why_we_love %> <br>
+              <% end %>
             </div>
           </div>
         <% end %>
