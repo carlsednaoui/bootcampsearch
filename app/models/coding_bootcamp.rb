@@ -1,6 +1,7 @@
 class CodingBootcamp < ActiveRecord::Base
   validates_uniqueness_of :website
   has_many :programs
+  accepts_nested_attributes_for :programs
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
