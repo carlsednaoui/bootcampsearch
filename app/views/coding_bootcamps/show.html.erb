@@ -39,10 +39,12 @@
               <h3><strong><%= program.name %></strong> (<%= program.cost %>)</h3>
               <strong><%= program.length %></strong>: <%= raw program.location_list.map { |l| link_to l.titleize, location_path(l) }.join(', ') %>
 
-              <div class="bootcamp-languages-top">
-                <strong>You'll learn</strong>: 
-                <%= raw program.language_list.map { |l| link_to l.titleize , language_path(l) }.join(', ') %><br>
-              </div>
+              <% if program.language_list.length > 0 %>
+                <div class="bootcamp-languages-top">
+                  <strong>You'll learn</strong>: 
+                  <%= raw program.language_list.map { |l| link_to l.titleize , language_path(l) }.join(', ') %><br>
+                </div>
+              <% end %>
               <%= raw program.description %> <br>
               <% if program.why_we_love? %>
                 <br><strong>Why we love it</strong><br>
