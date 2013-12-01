@@ -3,7 +3,13 @@
   
   <% @coding_bootcamps.each do |coding_bootcamp| %>
     <ul>
-      <li class="col-md-4"><%= link_to coding_bootcamp.name, coding_bootcamp %></li>
+      <%= link_to coding_bootcamp do %>
+        <li class="col-md-3">
+          <%= coding_bootcamp.name %>
+          <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png') %>
+        </li>
+      <% end %>
+
     </ul>
   <% end %>
 </div>

@@ -1,10 +1,21 @@
 /***********************
 -> bootcamp index styles
 ***********************/
+@mixin border-ratius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 .bootcamps-index {
   li {
     list-style: none;
     border: 2px solid #EBEBEB;
+    margin: 30px;
+    height: 300px;
+    @include border-ratius(4px);
   }
 }
 
