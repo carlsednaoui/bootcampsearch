@@ -25,6 +25,7 @@ class CodingBootcampsController < ApplicationController
     @program_languages = @programs.map(&:language_list).flatten.uniq
     @program_locations = @programs.map(&:location_list).flatten.uniq
 
+    @utm_name = "?utm_campaign=coding_bootcamp&utm_source=coding_bootcamp_result_page&utm_medium=coding_bootcamp_name"
     @utm_logo = "?utm_campaign=coding_bootcamp&utm_source=coding_bootcamp_result_page&utm_medium=coding_bootcamp_logo"
     @utm_url = "?utm_campaign=coding_bootcamp&utm_source=coding_bootcamp_result_page&utm_medium=coding_bootcamp_link"
 

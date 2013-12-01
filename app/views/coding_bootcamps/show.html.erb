@@ -2,7 +2,7 @@
 <div class="bootcamp">
   <div class="header">
     <div class="large-container">
-      <h1 class="bootcamp-name-top"><%= link_to(@coding_bootcamp.name, @coding_bootcamp.website, target: "blank") %></h1>
+      <h1 class="bootcamp-name-top"><%= link_to(@coding_bootcamp.name, @coding_bootcamp.website + @utm_name, target: "blank") %></h1>
       <h2 class="bootcamp-tagline"><%= @coding_bootcamp.tagline %></h2>
 
       <div class="bootcamp-tags row">
