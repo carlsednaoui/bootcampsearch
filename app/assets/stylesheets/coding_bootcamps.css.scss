@@ -10,12 +10,20 @@
 }
 
 .bootcamps-index {
+  ul {
+    margin-top: 30px;
+  }
+
   li {
     list-style: none;
-    border: 2px solid #EBEBEB;
+    border: 3px solid #EBEBEB;
     margin: 30px;
     height: 300px;
     @include border-ratius(4px);
+  }
+
+  .logo-section {
+    height: 175px;
   }
 
   .bootcamp-logo {
@@ -24,6 +32,22 @@
     margin-top: 30px;
     max-width: 100px;
     max-height: 100px;
+  }
+
+  .bootcamp-name {
+    color: #2980B9;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .bootcamp-languages {
+    color: #354B60;
+    text-align: center;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

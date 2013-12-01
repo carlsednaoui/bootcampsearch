@@ -1,15 +1,19 @@
 <div class="container bootcamps-index">
-  <h1>Click on a bootcamp to learn more</h1>
-  
   <% @coding_bootcamps.each do |coding_bootcamp| %>
     <ul>
       <%= link_to coding_bootcamp do %>
-        <li class="col-md-3">
-          <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'bootcamp-logo') %>
-          <%= coding_bootcamp.name %>
+        <li class="col-md-3 col-sm-3 col-xs-12">
+          <div class="logo-section">
+            <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'bootcamp-logo') %>
+          </div>
+          <div class="bootcamp-name">
+            <%= coding_bootcamp.name %>
+          </div>
+          <div class="bootcamp-languages">
+            <%= coding_bootcamp.programs.map(&:language_list).flatten.uniq.join(', ').titleize %>
+          </div>
         </li>
-      <% end %>
-
+      <% end %>      
     </ul>
   <% end %>
 </div>
