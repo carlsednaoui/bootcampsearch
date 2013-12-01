@@ -23,10 +23,10 @@
   
   <div class="container">
     <div class="bootcamp-description">
-      <%= link_to image_tag('bootcamps_logo/' + @coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'pull-right bootcamp-logo-top'), @coding_bootcamp.website, target: "blank" %>
+      <%= link_to image_tag('bootcamps_logo/' + @coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'pull-right bootcamp-logo-top'), @coding_bootcamp.website + @utm_logo, target: "blank" %>
       <h2>About <%= @coding_bootcamp.name %></h2>
       <%= raw @coding_bootcamp.description %>
-      <p><%= link_to @coding_bootcamp.website, @coding_bootcamp.website, target: "blank" %></p>
+      <p><%= link_to @coding_bootcamp.website, @coding_bootcamp.website + @utm_url, target: "blank" %></p>
       <p><%= mail_to @coding_bootcamp.email, @coding_bootcamp.email, subject: "Hi, I found you on BootcampSearch" %></p>
     </div>
 
