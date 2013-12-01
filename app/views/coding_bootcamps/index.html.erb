@@ -2,7 +2,7 @@
   <% @coding_bootcamps.each do |coding_bootcamp| %>
     <ul>
       <%= link_to coding_bootcamp do %>
-        <li class="col-md-3 col-sm-3 col-xs-12">
+        <li class="col-md-3 col-sm-4 col-xs-12">
           <div class="logo-section">
             <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'bootcamp-logo') %>
           </div>

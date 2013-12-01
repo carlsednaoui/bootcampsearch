@@ -20,6 +20,10 @@
     margin: 30px;
     height: 300px;
     @include border-ratius(4px);
+
+    @media (max-width: 750px) {
+      margin: 0;
+    }
   }
 
   .logo-section {
