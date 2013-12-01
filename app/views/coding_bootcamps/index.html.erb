@@ -12,6 +12,9 @@
           <div class="bootcamp-languages">
             <%= coding_bootcamp.programs.map(&:language_list).flatten.uniq.join(', ').titleize %>
           </div>
+          <div class="bootcamp-locations">
+            <%= coding_bootcamp.programs.map(&:location_list).flatten.uniq.join(', ').titleize %>
+          </div>
         </li>
       <% end %>      
     </ul>

@@ -26,8 +26,12 @@
     }
   }
 
+  li:hover {
+    border-color: #2980B9;
+  }
+
   .logo-section {
-    height: 175px;
+    height: 150px;
   }
 
   .bootcamp-logo {
@@ -45,7 +49,7 @@
     text-align: center;
   }
 
-  .bootcamp-languages {
+  .bootcamp-languages, .bootcamp-locations {
     color: #354B60;
     text-align: center;
     margin-top: 10px;
@@ -82,8 +86,12 @@ $container-width: 960px;
 // scss awesomeness ends
 
 .bootcamp {
+  padding-bottom: 40px;
+
   .container {
     max-width: $container-width;
+    font-size: 1.2em;
+    font-height: 1.4em;
   }
 
   .large-container {
@@ -139,11 +147,25 @@ $container-width: 960px;
   }
 
   .bootcamp-description {
-    margin-top: 40px;
+    margin: 60px 0;
+  }
+
+  .bootcamp-logo {
+    max-width: 200px;
+    max-height: 200px;
+    padding-left: 30px;
   }
 
   .bootcamp-program {
     margin: 40px 0;
+  }
+
+  .bootcamp-languages {
+    margin: 20px 0;
+  }
+
+  .program {
+    margin-bottom: 50px;
   }
 }
 

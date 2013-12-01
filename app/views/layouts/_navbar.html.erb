@@ -16,6 +16,12 @@
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "Bootcamps", coding_bootcamps_path %></li>
       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse by language <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><%= raw @languages.map { |l| link_to l.titleize, language_path(l) }.join('') %></li>
+        </ul>
+      </li>
+      <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse by city <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li><%= raw @cities.map { |l| link_to l.titleize, location_path(l) }.join('') %></li>
