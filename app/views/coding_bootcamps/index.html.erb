@@ -5,8 +5,8 @@
     <ul>
       <%= link_to coding_bootcamp do %>
         <li class="col-md-3">
+          <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'bootcamp-logo') %>
           <%= coding_bootcamp.name %>
-          <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png') %>
         </li>
       <% end %>
 
