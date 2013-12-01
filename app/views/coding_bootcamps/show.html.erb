@@ -2,7 +2,7 @@
 <div class="bootcamp">
   <div class="header">
     <div class="large-container">
-      <h1 class="bootcamp-name"><%= link_to(@coding_bootcamp.name, @coding_bootcamp.website, target: "blank") %></h1>
+      <h1 class="bootcamp-name-top"><%= link_to(@coding_bootcamp.name, @coding_bootcamp.website, target: "blank") %></h1>
       <h2 class="bootcamp-tagline"><%= @coding_bootcamp.tagline %></h2>
 
       <div class="bootcamp-tags row">
@@ -23,7 +23,7 @@
   
   <div class="container">
     <div class="bootcamp-description">
-      <%= link_to image_tag('bootcamps_logo/' + @coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'pull-right bootcamp-logo'), @coding_bootcamp.website, target: "blank" %>
+      <%= link_to image_tag('bootcamps_logo/' + @coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'pull-right bootcamp-logo-top'), @coding_bootcamp.website, target: "blank" %>
       <h2>About <%= @coding_bootcamp.name %></h2>
       <%= raw @coding_bootcamp.description %>
       <p><%= link_to @coding_bootcamp.website, @coding_bootcamp.website, target: "blank" %></p>
@@ -39,7 +39,7 @@
               <h3><strong><%= program.name %></strong> (<%= program.cost %>)</h3>
               <strong><%= program.length %></strong>: <%= raw program.location_list.map { |l| link_to l.titleize, location_path(l) }.join(', ') %>
 
-              <div class="bootcamp-languages">
+              <div class="bootcamp-languages-top">
                 <strong>You'll learn</strong>: 
                 <%= raw program.language_list.map { |l| link_to l.titleize , language_path(l) }.join(', ') %><br>
               </div>
@@ -52,6 +52,33 @@
         <div class="clearfix"></div>
       </div>
     <% end %>
+
+    <div class="related-bootcamps row">
+      <% if @similar_bootcamps.length > 0 %>
+        <h2>Related bootcamps</h2>
+      <% end %>
+      
+      <% @similar_bootcamps.each do |coding_bootcamp| %>
+          <ul>
+            <%= link_to coding_bootcamp do %>
+              <li class="col-md-3 col-sm-4 col-xs-12">
+                <div class="logo-section">
+                  <%= image_tag('bootcamps_logo/' + coding_bootcamp.name.downcase.gsub(' ', '')+'.png', class: 'bootcamp-logo') %>
+                </div>
+                <div class="bootcamp-name">
+                  <%= coding_bootcamp.name %>
+                </div>
+                <div class="bootcamp-languages">
+                  <%= coding_bootcamp.programs.map(&:language_list).flatten.uniq.join(', ').titleize %>
+                </div>
+                <div class="bootcamp-locations">
+                  <%= coding_bootcamp.programs.map(&:location_list).flatten.uniq.join(', ').titleize %>
+                </div>
+              </li>
+            <% end %>      
+          </ul>
+        <% end %>
+    </div>
 
     <%= link_to '« Back', coding_bootcamps_path, class:"btn btn-default" %>
   </div>

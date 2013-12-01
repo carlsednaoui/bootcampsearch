@@ -104,19 +104,19 @@ $container-width: 960px;
     background-color: $header-background;
   }
 
-  .bootcamp-name {
+  .bootcamp-name-top {
     text-align: center;
     padding-top: 30px;
   }
 
-  .bootcamp-name a {
+  .bootcamp-name-top a {
     margin-top: 0;
     font-size: 2.3em;
     color: #FBFCFC;
     font-weight: 700;
   }
 
-  .bootcamp-name a:hover {
+  .bootcamp-name-top a:hover {
     @extend .hover-style;
   }
 
@@ -130,7 +130,7 @@ $container-width: 960px;
     margin: 50px 0;
     font-size: 1.4em;
     text-align: left;
-    color: $bootcamp-subheader-color;
+    color: white;
 
     div:first-child {
       margin-right: 25px;
@@ -150,7 +150,7 @@ $container-width: 960px;
     margin: 60px 0;
   }
 
-  .bootcamp-logo {
+  .bootcamp-logo-top {
     max-width: 200px;
     max-height: 200px;
     padding-left: 30px;
@@ -160,32 +160,17 @@ $container-width: 960px;
     margin: 40px 0;
   }
 
-  .bootcamp-languages {
+  .bootcamp-languages-top {
     margin: 20px 0;
   }
 
   .program {
     margin-bottom: 50px;
   }
+
+  .related-bootcamps {
+    @extend .bootcamps-index;
+    font-size: 0.9em;
+    margin-bottom: 70px;
+  }
 }
-
-// .icon-large {
-//   color: #D9EDFC;
-//   font-size: 2em;
-//   display: block;
-//   margin-bottom: 10px;
-// }
-
-
-
-// .bootcamp-logo {
-//   margin-top: 40px;
-//   text-align: center;
-// }
-
-// .bootcamp-logo img {
-// //   <%= image_tag("bootcamps_logo/Flatiron_School_logo.png", class: "bootcamp-logo") %>
-//   position: relative;
-//   margin: 0 auto;
-//   max-width: 130px;
-// }

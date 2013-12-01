@@ -24,6 +24,12 @@ class CodingBootcampsController < ApplicationController
 
     @program_languages = @programs.map(&:language_list).flatten.uniq
     @program_locations = @programs.map(&:location_list).flatten.uniq
+
+    similar_programs = Program.tagged_with(@program_languages, any: true).map(&:coding_bootcamp_id)
+    similar_bootcamps = CodingBootcamp.find_all_by_id(similar_programs)
+    similar_bootcamps.delete(@coding_bootcamp)
+
+    @similar_bootcamps = similar_bootcamps.sample(3)
   end
 
   # GET /coding_bootcamps/new
